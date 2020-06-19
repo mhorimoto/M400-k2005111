@@ -1,4 +1,8 @@
 # Add any directories, files, or patterns you don't want to be tracked by version control
+*~
+*.avr.mega.elf
+*.avr.mega.hex
+*.avr.mega.with_bootloader.hex
 eagle.epf
 *.s\#?
 *.b\#?
