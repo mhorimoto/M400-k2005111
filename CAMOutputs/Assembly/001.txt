@@ -1,0 +1,22 @@
+Partlist exported from /home/horimoto/EAGLE/projects/k2005111/001.sch at 2020/06/20 12:24
+
+Qty Value            Device                   Package             Parts              Description                             POPULARITY SPICEPREFIX
+2                    TOSHIBA_TLP222A_F_SIMPLE TOSHIBA_TLP222A_F_0 U$2, U$3                                                                         
+1   0.1uF            C-EU025-025X050          C025-025X050        C2                 CAPACITOR, European symbol              65         C          
+1   10uF             CPOL-EUE2-5              E2-5                C1                 POLARIZED CAPACITOR, European symbol    14         C          
+5   1N4007           1N4004                   DO41-10             D1, D2, D3, D4, D5 DIODE                                   82                    
+3   4.7k             R-US_0207/7              0207/7              R1, R2, R3         RESISTOR, American symbol               22         R          
+1   ARDUINO-NANO-3.0 ARDUINO-NANO-3.0         ARDUINO-NANO-3.0    M1                 Arduino Nano 3.0 and compatible devices                       
+1   BTN-A            02-JST-A                 B02B-XH             CN08               JST CONNECTOR                                                 
+1   BTN-B            02-JST-A                 B02B-XH             CN09               JST CONNECTOR                                                 
+1   BTN-C            02-JST-A                 B02B-XH             CN10               JST CONNECTOR                                                 
+1   BTN-STOP         02-JST-A                 B02B-XH             CN11               JST CONNECTOR                                                 
+1   DELAY-VR         03-JST-A                 B03B-XH             CN12               JST CONNECTOR                                                 
+1   I2C-LCD          04-JST-A                 B04B-XH             CN04               JST CONNECTOR                                                 
+1   INPUT-A          02-JST-A                 B02B-XH             CN05               JST CONNECTOR                                                 
+1   INPUT-B          02-JST-A                 B02B-XH             CN06               JST CONNECTOR                                                 
+1   INPUT-C          02-JST-A                 B02B-XH             CN07               JST CONNECTOR                                                 
+1   JD-VCC           02-JST-A                 B02B-XH             CN02               JST CONNECTOR                                                 
+1   PWR5V            02-JST-A                 B02B-XH             CN01               JST CONNECTOR                                                 
+1   TO-RLY           10-JST-A                 B10B-XH             CN03               JST CONNECTOR                                                 
+1   U1               TOSHIBA_TLP222A_F_SIMPLE TOSHIBA_TLP222A_F_0 U$1                                                                              
