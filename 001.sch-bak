@@ -1125,6 +1125,4 @@ Text Label 9250 1100 0    50   ~ 0
 5V_M
 Text Label 9150 2300 0    50   ~ 0
 5V_JDV
-Text Label 6850 1100 0    50   ~ 0
-5V_MPU
 $EndSCHEMATC
