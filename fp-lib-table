@@ -3,4 +3,6 @@
   (lib (name HOLE)(type KiCad)(uri ${KISYSMOD}/MountingHole.pretty)(options "")(descr ""))
   (lib (name R)(type KiCad)(uri ${KISYSMOD}/Resistor_THT.pretty)(options "")(descr ""))
   (lib (name C)(type KiCad)(uri ${KISYSMOD}/Capacitor_THT.pretty)(options "")(descr ""))
+  (lib (name varistor)(type KiCad)(uri /usr/share/kicad/modules/Varistor.pretty)(options "")(descr ""))
+  (lib (name Di)(type KiCad)(uri /usr/share/kicad/modules/Diode_THT.pretty)(options "")(descr ""))
 )
