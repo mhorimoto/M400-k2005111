@@ -2,7 +2,7 @@
 #include <avr/wdt.h>
 #include <LiquidCrystal_I2C.h>
 
-#define VERSION  "a00"
+#define VERSION  "A20"
 
 uint8_t mcusr_mirror __attribute__ ((section (".noinit")));
 void get_mcusr(void)	 \
@@ -16,13 +16,13 @@ void get_mcusr(void) {
 
 
 const char version[] PROGMEM = VERSION;
-  
+
 LiquidCrystal_I2C lcd(0x27,16,2);  // set the LCD address to 0x27 for a 16 chars and 2 line display
 char lcdtext[17];
 char lcdtitle[17];
 long int lc;
 int tl;
-int inabp, inbbp, instopp;
+int inabp, inbbp, instopp, insts;
 boolean forceMode,breakForce;
 
 void setup(void) {
@@ -46,7 +46,7 @@ void setup(void) {
   lcd.init();
   lcd.backlight();
   lcd.setCursor(0,0);
-  lcd.print("K2005111 a11");
+  lcd.print("K2005111 A20");
   lc = 0;
   forceMode = false;
   breakForce = false;
@@ -54,6 +54,7 @@ void setup(void) {
   Serial.begin(115200);
   lcd.setCursor(14,1);
   lcd.print("RM");
+  insts = 0;     // input status 0:OFF 1:A 2:B 4:C(if exist)
 }
 
 void loop(void) {
@@ -62,6 +63,9 @@ void loop(void) {
   boolean aflg,bflg,stopflg;
 
   wdt_reset();
+  //
+  //  LOW is ASSERT
+  //
   inao = digitalRead(1);
   inbo = digitalRead(0);
   inab = digitalRead(12);
@@ -80,6 +84,9 @@ void loop(void) {
   }
   lcd.setCursor(0,1);
   if (forceMode) {
+    //
+    //*********** FORCE MODE *************
+    //
     if (inab==LOW) {       // A BUTTON
       forceMode = true;
       lc=0;
@@ -113,6 +120,18 @@ void loop(void) {
       digitalWrite(5,LOW);
     }
   } else {
+    //
+    //*********** REMOTE MODE *************
+    //
+    insts = 0; // Reset status
+    if (inao==LOW) { insts  = 1; }
+    if (inbo==LOW) { insts |= 2; }
+    // if (inco==LOW) { insts |= 4; }
+    switch(insts) {
+    case 0:
+      break;
+    case 1: // 
+      
     if (inao==LOW) {
       lcd.print("in=a out=a");
       digitalWrite(3,HIGH);
