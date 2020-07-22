@@ -2,7 +2,7 @@
 #include <avr/wdt.h>
 #include <LiquidCrystal_I2C.h>
 
-#define VERSION  "A20"
+#define VERSION  "A26"
 
 uint8_t mcusr_mirror __attribute__ ((section (".noinit")));
 void get_mcusr(void)	 \
@@ -21,13 +21,15 @@ LiquidCrystal_I2C lcd(0x27,16,2);  // set the LCD address to 0x27 for a 16 chars
 char lcdtext[17];
 char lcdtitle[17];
 long int lc;
+unsigned long pmillsec,dmillsec,cmillsec; 
 int tl;
 int inabp, inbbp, instopp, insts;
+int ain, delayA, delayB;   // Delay time counter for A,B
 boolean forceMode,breakForce;
 
 void setup(void) {
   configure_wdt();
-  pinMode(A0,INPUT);
+  pinMode(A0,INPUT);        // Delay Time Adjuster
   pinMode(0,INPUT_PULLUP);  // INPUT-B OPTCOUPLE
   pinMode(1,INPUT_PULLUP);  // INPUT-A OPTCOUPLE
   pinMode(10,INPUT_PULLUP); // STOP    BUTTON
@@ -45,8 +47,8 @@ void setup(void) {
   wdt_reset();
   lcd.init();
   lcd.backlight();
-  lcd.setCursor(0,0);
-  lcd.print("K2005111 A20");
+  lcd.setCursor(13,0);
+  lcd.print(VERSION);
   lc = 0;
   forceMode = false;
   breakForce = false;
@@ -55,6 +57,9 @@ void setup(void) {
   lcd.setCursor(14,1);
   lcd.print("RM");
   insts = 0;     // input status 0:OFF 1:A 2:B 4:C(if exist)
+  pmillsec = 0;
+  dmillsec = 0;
+  cmillsec = millis();
 }
 
 void loop(void) {
@@ -71,6 +76,11 @@ void loop(void) {
   inab = digitalRead(12);
   inbb = digitalRead(11);
   instop = digitalRead(10);
+  ain = analogRead(A0);
+  ain = (ain*10)/1023;
+  sprintf(lcdtext,"DELAY=%2dsec",ain);
+  lcd.setCursor(0,0);
+  lcd.print(lcdtext);
   if ((inab*inbb)==0) {
     forceMode = true;
     lcd.setCursor(14,1);
@@ -91,7 +101,7 @@ void loop(void) {
     if (inab==LOW) {       // A BUTTON
       forceMode = true;
       lc=0;
-      lcd.print("IN=A OUT=A");
+      lcd.print("IN=A  OUT=A");
       digitalWrite(3,HIGH);
       digitalWrite(2,LOW);
       delay(70);
@@ -99,7 +109,7 @@ void loop(void) {
     }
     if (instop==LOW) {      // STOP BUTTON
       forceMode = true;
-      lcd.print("IN=N OUT=N");
+      lcd.print("IN=N  OUT=N");
       digitalWrite(5,HIGH);
       digitalWrite(2,HIGH);
       digitalWrite(3,HIGH);
@@ -114,42 +124,82 @@ void loop(void) {
     if (inbb==LOW) {         // B BUTTON
       forceMode = true;
       lc=0;
-      lcd.print("IN=B OUT=B");
+      lcd.print("IN=B  OUT=B");
       digitalWrite(2,HIGH);
       digitalWrite(3,LOW);
       delay(70);
       digitalWrite(5,LOW);
     }
   } else {
-    wdt_reset();
     //
     //*********** REMOTE MODE *************
     //
+    cmillsec = millis();
+    dmillsec = cmillsec - pmillsec; // 1000mSecを計算する
+    if (dmillsec>1000) {
+      if (delayA>0) {
+	delayA--;
+      }
+      if (delayB>0) {
+	delayB--;
+      }
+      pmillsec = cmillsec;
+    }
+    wdt_reset();
     insts = 0; // Reset status
     if (inao==LOW) { insts  = 1; }
     if (inbo==LOW) { insts |= 2; }
     // if (inco==LOW) { insts |= 4; }
+    lcd.setCursor(0,1);
+    lcd.print("IN=X LCK=");
     switch(insts) {
     case 0:
-      lcd.print("in=n out=n");
       digitalWrite(5,HIGH);
       delay(70);
       digitalWrite(2,HIGH);
       digitalWrite(3,HIGH);
+      if (delayA>0) {
+	sprintf(lcdtext,"A/%02d",delayA);
+	lcd.setCursor(9,1);
+	lcd.print(lcdtext);
+      }
+      if (delayB>0) {
+	sprintf(lcdtext,"B/%02d",delayB);
+	lcd.setCursor(9,1);
+	lcd.print(lcdtext);
+      }
+      if ((delayA==0)&&(delayB==0)) {
+	lcd.setCursor(9,1);
+	lcd.print("X   ");
+      }
       break;
     case 1: // IN A
-      lcd.print("in=a out=a");
+      if (delayA>0) {
+	break;
+      }
+      lcd.setCursor(3,1);
+      lcd.print("A");
+      lcd.setCursor(9,1);
+      lcd.print("B   ");
       digitalWrite(3,HIGH);
       digitalWrite(2,LOW);
       delay(70);
       digitalWrite(5,LOW);
+      delayB = ain;
       break;      
     case 2: // IN B
-      lcd.print("in=b out=b");
+      if (delayB>0) {
+	break;
+      }
+      lcd.setCursor(3,1);
+      lcd.print("B");
+      lcd.setCursor(9,1);
+      lcd.print("A   ");
       digitalWrite(2,HIGH);
       digitalWrite(3,LOW);
       delay(70);
       digitalWrite(5,LOW);
+      delayA = ain;
       break;
     default:
       break;
