@@ -84,6 +84,7 @@ void loop(void) {
   }
   lcd.setCursor(0,1);
   if (forceMode) {
+    wdt_reset();
     //
     //*********** FORCE MODE *************
     //
@@ -120,6 +121,7 @@ void loop(void) {
       digitalWrite(5,LOW);
     }
   } else {
+    wdt_reset();
     //
     //*********** REMOTE MODE *************
     //
@@ -129,27 +131,28 @@ void loop(void) {
     // if (inco==LOW) { insts |= 4; }
     switch(insts) {
     case 0:
-      break;
-    case 1: // 
-      
-    if (inao==LOW) {
-      lcd.print("in=a out=a");
-      digitalWrite(3,HIGH);
-      digitalWrite(2,LOW);
-      delay(70);
-      digitalWrite(5,LOW);
-    } else if (inbo==LOW) {
-      lcd.print("in=b out=b");
-      digitalWrite(2,HIGH);
-      digitalWrite(3,LOW);
-      delay(70);
-      digitalWrite(5,LOW);
-    } else {
       lcd.print("in=n out=n");
       digitalWrite(5,HIGH);
       delay(70);
       digitalWrite(2,HIGH);
       digitalWrite(3,HIGH);
+      break;
+    case 1: // IN A
+      lcd.print("in=a out=a");
+      digitalWrite(3,HIGH);
+      digitalWrite(2,LOW);
+      delay(70);
+      digitalWrite(5,LOW);
+      break;      
+    case 2: // IN B
+      lcd.print("in=b out=b");
+      digitalWrite(2,HIGH);
+      digitalWrite(3,LOW);
+      delay(70);
+      digitalWrite(5,LOW);
+      break;
+    default:
+      break;
     }
   }
 }
