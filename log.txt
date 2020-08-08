@@ -1,8 +1,0 @@
-23時49分05秒: Unsupported Eagle layer 'Holes' (45), converted to Dwgs.User layer
-23時49分05秒: Unsupported Eagle layer 'Holes' (45), converted to Dwgs.User layer
-23時49分05秒: Unsupported Eagle layer 'Holes' (45), converted to Dwgs.User layer
-23時49分05秒: Unsupported Eagle layer 'Holes' (45), converted to Dwgs.User layer
-23時49分05秒: Unsupported Eagle layer 'tRestrict' (41), converted to Dwgs.User layer
-23時49分05秒: Unsupported Eagle layer 'tRestrict' (41), converted to Dwgs.User layer
-23時49分05秒: Unsupported Eagle layer 'tRestrict' (41), converted to Dwgs.User layer
-23時49分05秒: Unsupported Eagle layer 'tRestrict' (41), converted to Dwgs.User layer

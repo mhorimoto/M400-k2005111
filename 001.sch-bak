@@ -4,7 +4,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "M400-K2005111"
+Title "K2005111"
 Date "2020-06-26"
 Rev "001"
 Comp "HOLLY&Co.,Ltd."
@@ -324,6 +324,17 @@ Wire Wire Line
 Connection ~ 8100 1100
 Connection ~ 9000 1100
 Connection ~ 8500 1100
+$Comp
+L 001-eagle-import:A4L-LOC #FRAME1
+U 1 1 73DA64CA
+P 900 7300
+F 0 "#FRAME1" H 900 7300 50  0001 C CNN
+F 1 "A4L-LOC" H 900 7300 50  0001 C CNN
+F 2 "" H 900 7300 50  0001 C CNN
+F 3 "" H 900 7300 50  0001 C CNN
+	1    900  7300
+	1    0    0    -1  
+$EndComp
 $Comp
 L 001-eagle-import:02-JST-A CN1
 U 1 1 0FA3F66F
@@ -1006,6 +1017,8 @@ F 3 "" H 2000 6100 50  0001 C CNN
 	1    2000 6100
 	0    -1   -1   0   
 $EndComp
+Text Notes 7600 7000 0    170  ~ 0
+MODEL-400\nK2005111
 Text GLabel 6600 1700 0    10   BiDi ~ 0
 VIN
 Text GLabel 6600 3000 0    10   BiDi ~ 0
