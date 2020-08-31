@@ -6,3 +6,4 @@
 eagle.epf
 *.s\#?
 *.b\#?
+*.FCStd?

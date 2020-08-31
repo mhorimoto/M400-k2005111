@@ -1,1 +1,562 @@
+66896845542686
+001
+1X03
+<b>PIN HEADER</b>
+
 0
+3
+3
+001
+2X20
+<b>PIN HEADER</b>
+
+0
+40
+40
+001
+0204_7
+<b>RESISTOR</b><p>
+type 0204, grid 7.5 mm
+
+0
+2
+2
+001
+B2B-XH
+<b>JST XH Connector</b>
+
+<p>JST 2.54mm connector. Folded beam contact, box-shaped shrouded header, header with a boss, interchangeability, conformance to the HA terminal</p>
+
+<p>Datasheet: <a href="http://www.jst-mfg.com/product/pdf/eng/eXH.pdf"> eXH.pdf</a></p>
+
+0
+2
+2
+001
+B3B-XH
+<b>JST XH Connector</b>
+
+<p>JST 2.54mm connector. Folded beam contact, box-shaped shrouded header, header with a boss, interchangeability, conformance to the HA terminal</p>
+
+<p>Datasheet: <a href="http://www.jst-mfg.com/product/pdf/eng/eXH.pdf"> eXH.pdf</a></p>
+
+0
+3
+3
+001
+B4B-XH
+<b>JST XH Connector</b>
+
+<p>JST 2.54mm connector. Folded beam contact, box-shaped shrouded header, header with a boss, interchangeability, conformance to the HA terminal</p>
+
+<p>Datasheet: <a href="http://www.jst-mfg.com/product/pdf/eng/eXH.pdf"> eXH.pdf</a></p>
+
+0
+4
+4
+001
+C2.5-3
+<B>MKS2</B>, 5 x 3 mm, grid 2.54 mm
+
+0
+2
+2
+001
+DIL14
+<b>Dual In Line Package</b>
+
+0
+14
+14
+001
+DIL18
+<B>Dual In Line</B><p>
+package type P
+
+0
+18
+18
+001
+HC49_S
+<b>CRYSTAL</b>
+
+0
+2
+2
+001
+LED_3MM
+<h3>LED 3MM PTH</h3>
+
+3 mm, round.
+
+<p>Specifications:
+<ul><li>Pin count: 2</li>
+<li>Pin pitch: 0.1inch</li>
+<li>Diameter: 3mm</li>
+</ul></p>
+<p>Example device(s):
+<ul><li>LED</li></ul>
+
+0
+2
+2
+001
+SC1602
+SC1602
+
+0
+16
+16
+001
+SSW-105-02-G-S
+<b>THROUGH-HOLE .025" SQ POST SOCKET</b><p>
+Source: Samtec SSW.pdf
+
+0
+5
+5
+001
+SW2-5.0-6.0X3.0X4.3MM
+
+
+0
+2
+2
+001
+TO92D
+<b>TO-92</b><p>
+grid 2.54 mm
+
+0
+3
+3
+001
+TSR-065
+
+
+0
+3
+3
+Connector_RJ
+RJ12_Amphenol_54601
+RJ12 connector  https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/c-bmj-0082.pdf
+RJ12 connector
+0
+6
+6
+Connector_RJ
+RJ14_Connfly_DS1133-S4_Horizontal
+RJ14 connector 6P4C Horizontal http://www.connfly.com/userfiles/image/UpLoadFile/File/2012/10/26/DS1133.pdf
+RJ14 connector 6P4C Connfly DS1133
+0
+4
+4
+Connector_RJ
+RJ25_Wayconn_MJEA-660X1_Horizontal
+RJ25 6P6C Socket 90 degrees, https://wayconn.com/wp-content/themes/way/datasheet/MJEA-660X1XXX_RJ25_6P6C_PCB_RA.pdf
+RJ12 RJ18 RJ25 jack connector 6P6C
+0
+6
+6
+Connector_RJ
+RJ45_Abracon_ARJP11A-MA_Horizontal
+Shielded RJ45 ethernet connector with transformer and POE (https://abracon.com/Magnetics/lan/ARJP11A.PDF)
+ethernet 8p8c transformer poe rj45
+0
+15
+14
+Connector_RJ
+RJ45_Amphenol_54602-x08_Horizontal
+8 Pol Shallow Latch Connector, Modjack, RJ45 (https://cdn.amphenol-icc.com/media/wysiwyg/files/drawing/c-bmj-0102.pdf)
+RJ45
+0
+8
+8
+Connector_RJ
+RJ45_Amphenol_RJHSE538X
+Shielded, 2 LED, https://www.amphenolcanada.com/ProductSearch/drawings/AC/RJHSE538X.pdf
+RJ45 8p8c ethernet cat5
+0
+14
+13
+Connector_RJ
+RJ45_Amphenol_RJHSE538X-02
+Shielded, 2 LED, 2 Ports, http://www.amphenolinfocom.eu/NavData/Drawings/RJHSE-538X-02-REVC.pdf
+RJ45 8p8c dual ethernet cat5
+0
+26
+25
+Connector_RJ
+RJ45_Amphenol_RJHSE5380
+Shielded, https://www.amphenolcanada.com/ProductSearch/drawings/AC/RJHSE538X.pdf
+RJ45 8p8c ethernet cat5
+0
+10
+9
+Connector_RJ
+RJ45_Amphenol_RJHSE5380-08
+Shielded, https://www.amphenolcanada.com/ProductSearch/drawings/AC/RJHSE538X08.pdf
+RJ45 8p8c ethernet cat5
+0
+68
+65
+Connector_RJ
+RJ45_Amphenol_RJMG1BD3B8K1ANR
+1 Port RJ45 Magjack Connector Through Hole 10/100 Base-T, AutoMDIX, https://www.amphenolcanada.com/ProductSearch/Drawings/AC/RJMG1BD3B8K1ANR.PDF
+RJ45 Magjack
+0
+14
+13
+Connector_RJ
+RJ45_BEL_SS74301-00x_Vertical
+https://belfuse.com/resources/drawings/stewartconnector/dr-stw-ss-74301-001-ss-74301-002-ss-74301-005.pdf
+RJ45 Vertical Shield LED Green Yellow
+0
+14
+13
+Connector_RJ
+RJ45_Cetus_J1B1211CCD_Horizontal
+1 Port RJ45 Magjack Connector Through Hole 10/100 Base-T, Cetus, used and distributed by WIZnet (https://wizwiki.net/wiki/lib/exe/fetch.php?media=products:wiz550web:wiz550webds_kr:j1b1211ccd.pdf)
+RJ45 Magjack
+0
+14
+13
+Connector_RJ
+RJ45_Hanrun_HR911105A
+http://www.kosmodrom.com.ua/pdf/HR911105A.pdf
+RJ45 Magjack
+0
+14
+13
+Connector_RJ
+RJ45_Molex_0855135013_Vertical
+1 Port, RJ45, Series 85513, vertical, SMD, https://www.molex.com/pdm_docs/sd/855135013_sd.pdf
+RJ45 Vertical
+0
+9
+9
+Connector_RJ
+RJ45_Ninigi_GE
+1 port ethernet throughhole connector, https://en.ninigi.com/product/rj45ge/pdf
+RJ45 ethernet 8p8c
+0
+10
+9
+Connector_RJ
+RJ45_OST_PJ012-8P8CX_Vertical
+RJ45 vertical connector https://www.on-shore.com/wp-content/uploads/PJ012-8P8CX.pdf
+RJ45 PJ012
+0
+8
+8
+Connector_RJ
+RJ45_Plug_Metz_AJP92A8813
+plug, ethernet, 8P8C, RJ45 Plug
+AJP92A8813 8P8C RJ45 ethernet plug
+0
+8
+8
+Connector_RJ
+RJ45_Pulse_JK0654219NL_Horizontal
+10/100/1000 Base-T RJ45 single port with LEDs https://media.digikey.com/pdf/Data%20Sheets/Pulse%20PDFs/JK%20Series.pdf#page=2
+RJ45 8p8c ethernet
+0
+18
+17
+Connector_RJ
+RJ45_Pulse_JXD6-0001NL_Horizontal
+RJ45 ethernet transformer with magnetics (https://productfinder.pulseeng.com/doc_type/WEB301/doc_num/JXD6-0001NL/doc_part/JXD6-0001NL.pdf)
+ethernet 8p8c transformer magjack
+0
+12
+11
+Connector_RJ
+RJ45_Wuerth_7499010001A_Horizontal
+10/100Base-TX RJ45 ethernet magnetic transformer connector horizontal https://katalog.we-online.de/pbs/datasheet/7499010001A.pdf
+RJ45 ethernet magnetic
+0
+10
+9
+Connector_RJ
+RJ45_Wuerth_7499010121A_Horizontal
+10/100Base-TX RJ45 ethernet magnetic transformer connector horizontal with green/orange LEDs https://katalog.we-online.de/pbs/datasheet/7499010121A.pdf
+RJ45 ethernet magnetic
+0
+14
+13
+Connector_RJ
+RJ45_Wuerth_7499111446_Horizontal
+LAN-Transformer WE-RJ45LAN 10/100/1000 BaseT
+ethernet lan connector
+0
+16
+15
+Connector_RJ
+RJ45_Wuerth_7499151120_Horizontal
+Wuerth 7499151120, LAN-Transformer WE-RJ45LAN 10/100/1000 BaseT, Dual Ethernet Jack (http://katalog.we-online.de/pbs/datasheet/7499151120.pdf)
+ethernet lan connector
+0
+32
+29
+Connector_RJ
+RJ45_Wuerth_74980111211_Horizontal
+RJ45 LAN Transformer 10/100BaseT (https://katalog.we-online.de/pbs/datasheet/74980111211.pdf)
+lan magnetics transformer
+0
+14
+13
+M800-NCxPoE
+RJ45_Neltron_7810-8P8C
+
+
+0
+0
+0
+holly
+05-043X78
+<b>POLYSWITCH</b><p>
+grid 5.2 mm, outline 4.3 x 7.8 mm
+
+0
+2
+2
+holly
+08-043X78
+<b>VARISTOR</b><p>
+grid 8 mm, outline 4.3 x 12 mm
+
+0
+2
+2
+holly
+08-043X78_VARI
+<b>VARISTOR</b><p>
+grid 8 mm, outline 4.3 x 12 mm
+
+0
+2
+2
+holly
+B02B-XH
+<b>JST XH Connector</b>
+
+<p>JST 2.54mm connector. Folded beam contact, box-shaped shrouded header, header with a boss, interchangeability, conformance to the HA terminal</p>
+
+<p>Datasheet: <a href="http://www.jst-mfg.com/product/pdf/eng/eXH.pdf"> eXH.pdf</a></p>
+
+0
+2
+2
+holly
+B03B-XH
+<b>JST XH Connector</b>
+
+<p>JST 2.54mm connector. Folded beam contact, box-shaped shrouded header, header with a boss, interchangeability, conformance to the HA terminal</p>
+
+<p>Datasheet: <a href="http://www.jst-mfg.com/product/pdf/eng/eXH.pdf"> eXH.pdf</a></p>
+
+0
+3
+3
+holly
+B04B-XH
+<b>JST XH Connector</b>
+
+<p>JST 2.54mm connector. Folded beam contact, box-shaped shrouded header, header with a boss, interchangeability, conformance to the HA terminal</p>
+
+<p>Datasheet: <a href="http://www.jst-mfg.com/product/pdf/eng/eXH.pdf"> eXH.pdf</a></p>
+
+0
+4
+4
+holly
+B05B-XH
+<b>JST XH Connector</b>
+
+<p>JST 2.54mm connector. Folded beam contact, box-shaped shrouded header, header with a boss, interchangeability, conformance to the HA terminal</p>
+
+<p>Datasheet: <a href="http://www.jst-mfg.com/product/pdf/eng/eXH.pdf"> eXH.pdf</a></p>
+
+0
+5
+5
+holly
+B06B-XH
+<b>JST XH Connector</b>
+
+<p>JST 2.54mm connector. Folded beam contact, box-shaped shrouded header, header with a boss, interchangeability, conformance to the HA terminal</p>
+
+<p>Datasheet: <a href="http://www.jst-mfg.com/product/pdf/eng/eXH.pdf"> eXH.pdf</a></p>
+
+0
+6
+6
+holly
+B07B-XH
+<b>JST XH Connector</b>
+
+<p>JST 2.54mm connector. Folded beam contact, box-shaped shrouded header, header with a boss, interchangeability, conformance to the HA terminal</p>
+
+<p>Datasheet: <a href="http://www.jst-mfg.com/product/pdf/eng/eXH.pdf"> eXH.pdf</a></p>
+
+0
+7
+7
+holly
+B08B-XH
+<b>JST XH Connector</b>
+
+<p>JST 2.54mm connector. Folded beam contact, box-shaped shrouded header, header with a boss, interchangeability, conformance to the HA terminal</p>
+
+<p>Datasheet: <a href="http://www.jst-mfg.com/product/pdf/eng/eXH.pdf"> eXH.pdf</a></p>
+
+0
+8
+8
+holly
+B09B-XH
+<b>JST XH Connector</b>
+
+<p>JST 2.54mm connector. Folded beam contact, box-shaped shrouded header, header with a boss, interchangeability, conformance to the HA terminal</p>
+
+<p>Datasheet: <a href="http://www.jst-mfg.com/product/pdf/eng/eXH.pdf"> eXH.pdf</a></p>
+
+0
+9
+9
+holly
+B10B-XH
+<b>JST XH Connector</b>
+
+<p>JST 2.54mm connector. Folded beam contact, box-shaped shrouded header, header with a boss, interchangeability, conformance to the HA terminal</p>
+
+<p>Datasheet: <a href="http://www.jst-mfg.com/product/pdf/eng/eXH.pdf"> eXH.pdf</a></p>
+
+0
+10
+10
+holly
+B11B-XH
+<b>JST XH Connector</b>
+
+<p>JST 2.54mm connector. Folded beam contact, box-shaped shrouded header, header with a boss, interchangeability, conformance to the HA terminal</p>
+
+<p>Datasheet: <a href="http://www.jst-mfg.com/product/pdf/eng/eXH.pdf"> eXH.pdf</a></p>
+
+0
+11
+11
+holly
+B12B-XH
+<b>JST XH Connector</b>
+
+<p>JST 2.54mm connector. Folded beam contact, box-shaped shrouded header, header with a boss, interchangeability, conformance to the HA terminal</p>
+
+<p>Datasheet: <a href="http://www.jst-mfg.com/product/pdf/eng/eXH.pdf"> eXH.pdf</a></p>
+
+0
+12
+12
+holly
+DIL08
+<b>Dual In Line Package</b>
+
+0
+8
+8
+holly
+DIL08-NJM2904D
+
+
+0
+8
+8
+holly
+DIL14
+<b>Dual In Line Package</b>
+
+0
+14
+14
+holly
+FT-234X
+<p><b>FT-234X</b></p>
+<p>USB-Serial convert module.</p>
+
+0
+4
+4
+holly
+H08
+<b>8-Lead Metal Can TO-99</b> (H-8)<p>
+Source: http://www.analog.com/static/imported-files/data_sheets/AD711.pdf
+
+0
+8
+8
+holly
+HLK-PM
+HLK-PM Power Module
+
+0
+4
+4
+holly
+JQC-3FF
+
+
+0
+5
+5
+holly
+LCC20
+<b>Leadless Chip Carrier</b><p> Ceramic Package
+
+0
+20
+20
+holly
+SC1602
+SC1602
+
+0
+16
+16
+holly
+SO8
+<b>8-Lead Small Outline IC</b> (SO-8)<p>
+Source: http://www.analog.com/UploadedFiles/Data_Sheets/703465986AD8611_2_0.pdf
+
+0
+8
+8
+holly
+SO14
+<b>Small Outline package</b> 150 mil
+
+0
+14
+14
+holly
+TO92D
+<b>TO-92</b><p>
+grid 2.54 mm
+
+0
+3
+3
+holly
+TO220F4
+<b>TO-220</b><p>
+grid 2.54 mm, horinzontal
+
+0
+4
+4
+holly
+TO220F4V
+TO-220F-4 Virtical Arrangement.
+
+0
+4
+4
