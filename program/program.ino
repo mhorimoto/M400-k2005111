@@ -2,7 +2,7 @@
 #include <avr/wdt.h>
 #include <LiquidCrystal_I2C.h>
 
-#define VERSION  "A26"
+#define VERSION  "A27"
 
 uint8_t mcusr_mirror __attribute__ ((section (".noinit")));
 void get_mcusr(void)	 \
@@ -37,10 +37,12 @@ void setup(void) {
   pinMode(12,INPUT_PULLUP); // INPUT-A BUTTON
   pinMode(2,OUTPUT);        // INPUT-A RELAY
   pinMode(3,OUTPUT);        // INPUT-B RELAY
-  pinMode(5,OUTPUT);        // OUTPUT  RELAY
+  pinMode(4,OUTPUT);        // OUTPUT-SW RELAY
+  pinMode(5,OUTPUT);        // OUTPUT-SIGNAL  RELAY
   digitalWrite(2,HIGH);     // RELAY-A
   digitalWrite(3,HIGH);     // RELAY-B
-  digitalWrite(5,HIGH);     // RELAY-OUTPUT
+  digitalWrite(4,HIGH);     // RELAY-SW OUTPUT
+  digitalWrite(5,HIGH);     // RELAY-SIGNAL OUTPUT
   inabp = digitalRead(12);   // A BUTTON
   inbbp = digitalRead(11);   // B BUTTON
   instopp = digitalRead(10); // STOP BUTTON
@@ -106,10 +108,13 @@ void loop(void) {
       digitalWrite(2,LOW);
       delay(70);
       digitalWrite(5,LOW);
+      delay(70);
+      digitalWrite(4,LOW);
     }
     if (instop==LOW) {      // STOP BUTTON
       forceMode = true;
       lcd.print("IN=N  OUT=N");
+      digitalWrite(4,HIGH);
       digitalWrite(5,HIGH);
       digitalWrite(2,HIGH);
       digitalWrite(3,HIGH);
@@ -129,6 +134,8 @@ void loop(void) {
       digitalWrite(3,LOW);
       delay(70);
       digitalWrite(5,LOW);
+      delay(70);
+      digitalWrite(4,LOW);
     }
   } else {
     //
@@ -154,6 +161,8 @@ void loop(void) {
     lcd.print("IN=X LCK=");
     switch(insts) {
     case 0:
+      digitalWrite(4,HIGH);
+      delay(70);
       digitalWrite(5,HIGH);
       delay(70);
       digitalWrite(2,HIGH);
@@ -185,6 +194,8 @@ void loop(void) {
       digitalWrite(2,LOW);
       delay(70);
       digitalWrite(5,LOW);
+      delay(70);
+      digitalWrite(4,LOW);
       delayB = ain;
       break;      
     case 2: // IN B
@@ -199,6 +210,8 @@ void loop(void) {
       digitalWrite(3,LOW);
       delay(70);
       digitalWrite(5,LOW);
+      delay(70);
+      digitalWrite(4,LOW);
       delayA = ain;
       break;
     default:
