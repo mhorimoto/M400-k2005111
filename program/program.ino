@@ -2,7 +2,7 @@
 #include <avr/wdt.h>
 #include <LiquidCrystal_I2C.h>
 
-#define VERSION  "A27"
+#define VERSION  "A28"
 
 uint8_t mcusr_mirror __attribute__ ((section (".noinit")));
 void get_mcusr(void)	 \
@@ -55,7 +55,7 @@ void setup(void) {
   forceMode = false;
   breakForce = false;
   wdt_reset();
-  Serial.begin(115200);
+  //  Serial.begin(115200); // Remove when A28
   lcd.setCursor(14,1);
   lcd.print("RM");
   insts = 0;     // input status 0:OFF 1:A 2:B 4:C(if exist)
